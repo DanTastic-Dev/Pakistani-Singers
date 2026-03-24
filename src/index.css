@@ -308,19 +308,21 @@ header .text-3xl {
     .panel-container {
         padding: 0 0.5rem;
         transform: none;
+        height: 45vh;
     }
     .immersive-slice-container {
         transform: none;
-        height: 45vh;
+        height: 40vh;
     }
     #featured-content {
         transform: none;
         transform-origin: top center;
         font-size: 1.25rem;
+        margin-bottom: 8vh;
     }
     .editorial-text-overlay {
         transform: none;
-        bottom: 8vh;
+        bottom: 15vh;
     }
     .editorial-text-overlay h2 {
         font-size: 1.5rem;
@@ -345,19 +347,21 @@ header .text-3xl {
     .panel-container {
         padding: 0 0.25rem;
         transform: none;
+        height: 40vh;
     }
     .immersive-slice-container {
         transform: none;
-        height: 40vh;
+        height: 35vh;
         gap: 8px;
     }
     #featured-content {
         transform: none;
         font-size: 1rem;
+        margin-bottom: 10vh;
     }
     .editorial-text-overlay {
         transform: none;
-        bottom: 12vh;
+        bottom: 18vh;
     }
     .editorial-text-overlay h2 {
         font-size: 1.25rem;
