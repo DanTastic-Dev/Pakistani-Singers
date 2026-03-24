@@ -45,6 +45,7 @@ export default function App() {
   const [isMuted, setIsMuted] = useState(false);
   
   const audioRef = useRef(null);
+  const panelContainerRef = useRef(null);
 
   const prevWork = worksArr[(currentWorkIndex - 1 + worksArr.length) % worksArr.length];
   const nextWork = worksArr[(currentWorkIndex + 1) % worksArr.length];
@@ -226,7 +227,7 @@ export default function App() {
       {/* Featured Layout */}
       {!featuredLayoutHidden && (
         <main id="featured-layout" className="flex-grow flex flex-col items-center justify-center pt-16 pb-16 relative transition-all duration-1000 overflow-hidden w-full h-full">
-          <div id="featured-panels" className="panel-container">
+          <div id="featured-panels" className="panel-container" ref={panelContainerRef}>
             {featuredPanelsData.map((p, i) => (
               <div 
                 key={i} 
