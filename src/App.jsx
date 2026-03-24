@@ -206,10 +206,21 @@ export default function App() {
   return (
     <>
       <audio ref={audioRef} loop />
-      <header className="fixed top-0 left-0 w-full z-50 flex justify-center items-center px-12 py-8 bg-transparent">
-        <div className="text-3xl font-signature text-[#f5f5f5] tracking-normal">
+      <header className="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-12 py-8 bg-transparent">
+        {activeView === 'secondary' && (
+          <div className="flex items-center">
+            <span className="material-symbols-outlined nav-arrow" onClick={handlePrevSlice}>arrow_back_ios</span>
+          </div>
+        )}
+        <div className={`text-3xl font-signature text-[#f5f5f5] tracking-normal ${ activeView === 'featured' ? 'mx-auto' : ''}`}>
           Top Pakistani Artists
         </div>
+        {activeView === 'secondary' && (
+          <div className="flex items-center">
+            <span className="material-symbols-outlined nav-arrow" onClick={handleNextSlice}>arrow_forward_ios</span>
+          </div>
+        )}
+        {activeView === 'featured' && <div></div>}
       </header>
 
       {/* Featured Layout */}
